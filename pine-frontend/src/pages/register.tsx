@@ -1,13 +1,15 @@
-// src/pages/register.tsx
 import React from 'react';
 import RegisterForm from '@/components/forms/RegisterForm';
+import Link from 'next/link';
 
 const RegisterPage: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-semibold my-4">Create an Account</h2>
+    <div className="register-page">
+      <h1>Register</h1>
       <RegisterForm />
-      {/* Additional components or steps for account creation */}
+      <p>
+        Already have an account? <Link href="/login">Login here</Link>.
+      </p>
     </div>
   );
 };

@@ -4,10 +4,13 @@ import ReservationForm from '@/components/forms/ReservationForm';
 
 const ReservationsPage: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-semibold my-4">Table Reservations</h2>
+    <div className="reservations-page">
+      <h1 className="text-2xl font-semibold my-4">Make a Reservation</h1>
+      <p className="mb-4">
+        We're excited to have you dine with us! Please fill out the form below to reserve your table.
+      </p>
       <ReservationForm />
-      {/* Additional components or information related to reservations */}
+      {/* You can add additional content here, like FAQs about reservations, contact information, or special instructions */}
     </div>
   );
 };

@@ -1,7 +1,8 @@
-// src/interfaces/user.ts
+// src/interfaces/User.ts
 export interface User {
   id: number;
   name: string;
   email: string;
-  // Add other fields as per your user model
+  role: string; // Example: 'admin', 'editor', etc.
+  // Add other fields as needed, like 'password', 'createdAt', etc.
 }

@@ -1,29 +1,28 @@
-// src/app/sections/MenuSection.tsx
+// src/components/sections/MenuSection.tsx
 import React, { useEffect, useState } from 'react';
-import apiService from '@/components/services/apiService';
+import apiService from '@/services/apiService';
 
 interface MenuItem {
   id: number;
   name: string;
   description: string;
   price: number;
-  // Add any other relevant fields
+  // Add additional fields as per your menu item structure
 }
 
 const MenuSection: React.FC = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string>('');
 
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        setLoading(true);
-        const items = await apiService.get('menu-items'); // Adjust 'menu-items' to your actual API endpoint
+        const items = await apiService.get('menu-items'); // Adjust endpoint as necessary
         setMenuItems(items);
-        setLoading(false);
-      } catch (error) {
-        setError('Failed to load menu items.');
+      } catch (err) {
+        setError('Failed to load menu items');
+      } finally {
         setLoading(false);
       }
     };
@@ -32,30 +31,23 @@ const MenuSection: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading menu items...</div>;
+    return <p>Loading menu...</p>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <p>{error}</p>;
   }
 
   return (
     <div className="menu-section">
-      <h2>Our Menu</h2>
-      {menuItems.length === 0 ? (
-        <p>No menu items available.</p>
-      ) : (
-        <ul>
-          {menuItems.map((item) => (
-            <li key={item.id}>
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <p>Price: ${item.price}</p>
-              {/* Add more details or a 'Add to Cart' button */}
-            </li>
-          ))}
-        </ul>
-      )}
+      {menuItems.map(item => (
+        <div key={item.id} className="menu-item">
+          <h3 className="text-xl font-semibold">{item.name}</h3>
+          <p>{item.description}</p>
+          <p className="font-bold">Price: ${item.price}</p>
+          {/* Additional elements for each menu item can go here */}
+        </div>
+      ))}
     </div>
   );
 };

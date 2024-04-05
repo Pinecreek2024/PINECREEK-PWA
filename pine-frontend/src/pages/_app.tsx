@@ -1,19 +1,20 @@
 // src/pages/_app.tsx
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { AuthProvider } from '@/components/context/AuthContext';
-import { CartProvider } from '@/components/context/CartContext';
-import { LoyaltyProvider } from '@/components/context/LoyaltyContext';
-import '@/styles/globals.css'; // Global styles
+import { AuthProvider } from '@/context/AuthContext';
+import { CartProvider } from '@/context/CartContext';
+import { LoyaltyProvider } from '@/context/LoyaltyContext';
+import { SuperAdminProvider } from '@/context/SuperAdminContext'; // Include your SuperAdminProvider
+import '../styles/globals.css'; // Ensure the path to your global styles is correct
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  // Wraps all components in the application with the specified context providers
-  // This is the place to add any additional context providers if necessary
   return (
-    <AuthProvider> {/* Provides authentication context */}
-      <CartProvider> {/* Provides shopping cart context */}
-        <LoyaltyProvider> {/* Provides loyalty program context */}
-          <Component {...pageProps} /> {/* Renders the current page */}
+    <AuthProvider>
+      <CartProvider>
+        <LoyaltyProvider>
+          <SuperAdminProvider>
+            <Component {...pageProps} />
+          </SuperAdminProvider>
         </LoyaltyProvider>
       </CartProvider>
     </AuthProvider>

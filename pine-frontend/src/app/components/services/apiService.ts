@@ -1,13 +1,13 @@
 // src/app/services/apiService.ts
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000'; // Replace with your Django API base URL
+const API_BASE_URL = 'http://localhost:8000'; // Replace with your actual Django API base URL
 
 const getHeaders = () => {
   return {
     'Content-Type': 'application/json',
     // Include other headers like Authorization if needed
-    // 'Authorization': `Bearer ${token}`, // Uncomment if using token authentication
+    // 'Authorization': `Bearer ${token}`, // Uncomment and use if your API requires token authentication
   };
 };
 
