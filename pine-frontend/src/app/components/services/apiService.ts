@@ -1,7 +1,7 @@
 // src/app/services/apiService.ts
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000'; // Replace with your actual Django API base URL
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 const getHeaders = () => {
   return {

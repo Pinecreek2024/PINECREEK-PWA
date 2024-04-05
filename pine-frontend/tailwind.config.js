@@ -1,11 +1,19 @@
 module.exports = {
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'media', // or 'class'
   theme: {
-    extend: {},
+    extend: {
+      // Extend Tailwind theme here
+    },
   },
   variants: {
-    extend: {},
+    // Define variants if needed
   },
-  plugins: [],
+  plugins: [
+    // Add any Tailwind plugins here
+  ],
 };

@@ -1,19 +1,18 @@
-// src/pages/_app.tsx
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { AuthProvider } from '@/context/AuthContext';
-import { CartProvider } from '@/context/CartContext';
-import { LoyaltyProvider } from '@/context/LoyaltyContext';
-import { SuperAdminProvider } from '@/context/SuperAdminContext'; // Include your SuperAdminProvider
-import '../styles/globals.css'; // Ensure the path to your global styles is correct
+import { AuthProvider } from '@/context/AuthContext'; // Context for authentication
+import { CartProvider } from '@/context/CartContext'; // Context for shopping cart
+import { LoyaltyProvider } from '@/context/LoyaltyContext'; // Context for loyalty program
+import { SuperAdminProvider } from '@/context/SuperAdminContext'; // Context for super admin functionalities
+import '../styles/globals.css'; // Global styles
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <AuthProvider>
-      <CartProvider>
-        <LoyaltyProvider>
-          <SuperAdminProvider>
-            <Component {...pageProps} />
+    <AuthProvider> {/* Wrap with AuthProvider */}
+      <CartProvider> {/* Wrap with CartProvider */}
+        <LoyaltyProvider> {/* Wrap with LoyaltyProvider */}
+          <SuperAdminProvider> {/* Wrap with SuperAdminProvider */}
+            <Component {...pageProps} /> {/* Render the current page */}
           </SuperAdminProvider>
         </LoyaltyProvider>
       </CartProvider>

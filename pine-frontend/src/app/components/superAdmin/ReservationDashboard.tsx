@@ -11,10 +11,10 @@ const ReservationDashboard: React.FC = () => {
   }
 
   return (
-    <div className="reservation-dashboard">
+    <div className='reservation-dashboard'>
       <h2>Reservation Dashboard</h2>
       {reservations.map((reservation: Reservation) => (
-        <div key={reservation.id} className="reservation-item">
+        <div key={reservation.id} className='reservation-item'>
           <p>Customer Name: {reservation.customerName}</p>
           <p>Date: {reservation.date}</p>
           <p>Time: {reservation.time}</p>

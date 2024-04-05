@@ -5,11 +5,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-          {/* Add additional global stylesheets or scripts here */}
+          {/* Add any <link> or <meta> tags here */}
+          {/* Example: <link rel="stylesheet" href="..." /> */}
         </Head>
         <body>
           <Main />

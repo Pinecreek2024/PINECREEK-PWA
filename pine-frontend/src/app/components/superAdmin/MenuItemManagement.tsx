@@ -11,10 +11,10 @@ const MenuItemManagement: React.FC = () => {
   }
 
   return (
-    <div className="menu-item-management">
+    <div className='menu-item-management'>
       <h2>Menu Item Management</h2>
       {menuItems.map((item: MenuItem) => (
-        <div key={item.id} className="menu-item">
+        <div key={item.id} className='menu-item'>
           <p>Name: {item.name}</p>
           <p>Description: {item.description}</p>
           <p>Price: {item.price}</p>
