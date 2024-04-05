@@ -1,6 +1,6 @@
 // src/app/components/forms/ReservationForm.tsx
 import React from 'react';
-import useReservationForm from '@/hooks/useReservationForm';
+import useReservationForm from '@/components/hooks/useReservationForm';
 
 const ReservationForm: React.FC = () => {
   const initialValues = { name: '', email: '', date: '', time: '', numberOfGuests: 1 };

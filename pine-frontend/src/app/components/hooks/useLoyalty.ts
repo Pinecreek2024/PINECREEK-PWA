@@ -1,6 +1,6 @@
 // src/app/hooks/useLoyalty.ts
 import { useContext } from 'react';
-import LoyaltyContext from '@/context/LoyaltyContext';
+import LoyaltyContext from '@/components/context/LoyaltyContext';
 
 const useLoyalty = () => {
   const context = useContext(LoyaltyContext);

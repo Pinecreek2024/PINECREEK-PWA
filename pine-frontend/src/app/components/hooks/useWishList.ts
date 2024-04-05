@@ -1,6 +1,6 @@
 // src/app/hooks/useWishlist.tsx
 import { useContext } from 'react';
-import WishlistContext from '@/context/WishlistContext';
+import WishlistContext from '@/components/context/WishlistContext';
 
 interface WishlistItem {
   id: number;

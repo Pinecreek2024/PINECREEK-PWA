@@ -1,6 +1,6 @@
 // src/app/components/features/LoyaltyProgram.tsx
 import React from 'react';
-import useLoyalty from '@/hooks/useLoyalty';
+import useLoyalty from '@/components/hooks/useLoyalty';
 
 const LoyaltyProgram: React.FC = () => {
   const { loyaltyPoints, earnPoints, redeemPoints } = useLoyalty();

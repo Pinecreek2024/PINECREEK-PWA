@@ -1,7 +1,7 @@
 // src/app/components/features/Wishlist.tsx
 import React from 'react';
-import { useWishlist } from '@/hooks/useWishList';
-import { useCart } from '@/hooks/useCart'; // Import useCart hook if adding to cart is required
+import { useWishlist } from '@/components/hooks/useWishList';
+import { useCart } from '@/components/hooks/useCart'; // Import useCart hook if adding to cart is required
 
 interface WishlistItem {
   id: number;

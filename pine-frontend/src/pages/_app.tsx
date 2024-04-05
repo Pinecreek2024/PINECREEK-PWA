@@ -1,9 +1,9 @@
 // src/pages/_app.tsx
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { AuthProvider } from '@/context/AuthContext';
-import { CartProvider } from '@/context/CartContext';
-import { LoyaltyProvider } from '@/context/LoyaltyContext';
+import { AuthProvider } from '@/components/context/AuthContext';
+import { CartProvider } from '@/components/context/CartContext';
+import { LoyaltyProvider } from '@/components/context/LoyaltyContext';
 import '@/styles/globals.css'; // Global styles
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {

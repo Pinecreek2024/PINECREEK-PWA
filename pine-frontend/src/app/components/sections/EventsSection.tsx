@@ -1,6 +1,6 @@
 // src/app/sections/EventsSection.tsx
 import React, { useEffect, useState } from 'react';
-import apiService from '@/services/apiService';
+import apiService from '@/components/services/apiService';
 
 interface Event {
   id: number;

@@ -1,10 +1,10 @@
 // src/pages/customer-portal.tsx
 import React, { useEffect, useState } from 'react';
-import useAuth from '@/hooks/useAuth';
-import useLoyalty from '@/hooks/useLoyalty';
-import apiService from '@/services/apiService';
-import { User } from '@/interfaces/user';
-import { Order } from '@/interfaces/order';
+import useAuth from '@/components/hooks/useAuth';
+import useLoyalty from '@/components/hooks/useLoyalty';
+import apiService from '@/components/services/apiService';
+import { User } from 'src/interfaces/user';
+import { Order } from 'src/interfaces/order';
 
 const CustomerPortal: React.FC = () => {
   const { authState } = useAuth();

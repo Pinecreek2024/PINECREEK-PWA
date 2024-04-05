@@ -1,16 +1,22 @@
 // src/pages/index.tsx
 import React from 'react';
-import Layout from '@/components/layout/PageLayout'; // Assuming you have a layout component
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+import MenuSection from '@/components/sections/MenuSection';
+import EventsSection from '@/components/sections/EventsSection';
+// Import other components or sections as needed
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
-    <Layout>
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center my-10">Welcome to Pinecreek Restaurant & Farmstall</h1>
-        {/* Content of your home page */}
-      </div>
-    </Layout>
+    <div className="home-page">
+      <Header />
+      {/* Main page content */}
+      <MenuSection />
+      <EventsSection />
+      {/* Other sections */}
+      <Footer />
+    </div>
   );
 };
 
-export default Home;
+export default HomePage;

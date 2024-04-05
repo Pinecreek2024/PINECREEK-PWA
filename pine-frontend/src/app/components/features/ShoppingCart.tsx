@@ -1,6 +1,6 @@
 // src/app/components/features/ShoppingCart.tsx
 import React from 'react';
-import { useCart } from '@/hooks/useCart';
+import { useCart } from '@/components/hooks/useCart';
 
 interface CartItem {
   id: number;

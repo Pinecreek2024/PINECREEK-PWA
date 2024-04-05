@@ -1,6 +1,6 @@
 // src/app/components/forms/ContactForm.tsx
 import React from 'react';
-import useForm from '@/hooks/useForm';
+import useForm from '@/components/hooks/useForm';
 
 interface ContactFormValues {
   name: string;
