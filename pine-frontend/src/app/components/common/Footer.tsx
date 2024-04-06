@@ -1,9 +1,8 @@
-// src/app/components/common/Footer.tsx
 import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='footer'>
+    <footer className="footer">
       <p>
         &copy; {new Date().getFullYear()} Pinecreek Restaurant & Farmstall. All
         rights reserved.

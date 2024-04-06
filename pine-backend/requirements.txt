@@ -1,0 +1,5 @@
+Django==3.2  # or your specific version
+djangorestframework==3.12  # or your specific version
+djangorestframework-simplejwt==4.6.0  # optional, for JWT-based authentication
+psycopg2-binary==2.9.1  # if using PostgreSQL, adjust the version as needed
+python-dotenv==0.19.1  # optional, for environment variable management
